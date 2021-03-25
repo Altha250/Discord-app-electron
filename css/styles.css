@@ -1,0 +1,637 @@
+/* подключение иконочного шрифта Fontello */
+@font-face {
+    font-family: 'fontello';
+    src: url('fonts/fontello.eot');
+    src: url('fonts/fontello.eot#iefix') format('embedded-opentype'),
+        url('fonts/fontello.woff2') format('woff2'),
+        url('fonts/fontello.woff') format('woff'),
+        url('fonts/fontello.ttf') format('truetype'),
+        url('fonts/fontello.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* прототип иконки Fontello */
+[class^="icon-"]:before,
+[class*="icon-"]:before {
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-top: 3px;
+    margin-right: 13px;
+    text-align: center;
+    color: lightgray;
+}
+
+/* смена фона у иконок при наведении */
+[class^="icon-"]:hover:before,
+[class*="icon-"]:hover:before {
+    color: #778fe6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+}
+
+/* Toolbar */
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.toolbar {
+    display: grid;
+    grid-template-columns: 10px 100px 1fr 50px 50px 50px 10px;
+    height: 40px;
+    background-color: #212226;
+}
+
+.logo {
+    font-weight: 700;
+    margin-top: 8px;
+    margin-left: 22px;
+    color: white;
+}
+
+.iconsToolbar {
+    width: 17px;
+    height: 17px;
+    margin-top: 11px;
+}
+
+/* иконка свернуть окно приложения */
+.icon-minus-outline:before { 
+    content: '\e808'; 
+    font-size: 20px;
+    padding-top: 6px;
+}
+
+/* иконка развернуть окно приложения */
+.icon-window-maximize:before { 
+    content: '\F2D0'; 
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+/* иконка закрыть окно приложения */
+.icon-cancel-outline:before { 
+    content: '\E809'; 
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+/* Включение возможности перемещения окна по экрану с помощью верхней плашки */
+.title {
+    -webkit-app-region: drag;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    height: 100vh;
+}
+
+.aLogo {
+    margin-left: 0;
+}
+
+.imgLogo {
+    width: 40px;
+    height: 30px;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #2f3137;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.circle:hover {
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+.imagesSidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.imgBot {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 55px;
+    border-radius: 50%/10%;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.imgController {
+    width: 60px;
+    height: 40px;
+}
+
+.imgPlus {
+    width: 20px;
+    height: 20px;
+}
+
+.imgSearch {
+    width: 20px;
+    height: 20px;
+}
+
+/* Channels */
+.channels {
+    background-color: #2f3137;
+    height: 100vh;
+}
+
+.communityName {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #000;
+}
+
+.features {
+    height: 80vh;
+}
+
+.welcome {
+    background-color: #40444c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.sharp {
+    padding-left: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5d5e64;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.subtitle a {
+    text-decoration: none;
+    text-transform: none;
+    display: inline-block;
+    color: #5d5e64;
+    margin-left: 15px;
+}
+
+a:hover {
+    color: white;
+}
+
+.chatChannel {
+   display: flex;
+   align-items: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+.user {
+    background-color: #2a2b2f;
+    margin-top: 15px;
+}
+
+.userBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userBlock img {
+    width: 40px;
+    height: 40px;
+}
+
+.userpick {
+    border-radius: 50px;
+}
+
+.userInfo {
+    margin-left: 12px;
+}
+
+.userName {
+    color: white;
+}
+
+.userID {
+    color: #5d5e64;
+    font-size: 14px;
+}
+
+.leftSide {
+    display: flex;
+    align-items: center;
+}
+
+.rightSide>.icons {
+    width: 25px;
+    height: 15px;
+    padding-right: 10px;
+}
+
+/* иконка микрофона */
+.icon-mic-outline:before { 
+    content: '\e800'; 
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+/* иконка наушника */
+.icon-headphones:before { 
+    content: '\E801'; 
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+/* иконка шестеренки */
+.icon-cog:before { 
+    content: '\E802'; 
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+/* Discussion */
+/* topSide */
+.discussion {
+    background-color: #36393f;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.pannelChannel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.currentChannel {
+    padding-top: 20px;
+    padding-bottom: 27px;
+    display: flex;
+    align-items: center;
+}
+
+.activeChannel {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+/* иконка колокольчика */
+.icon-bell-alt:before {
+    content: '\f0f3';
+    font-size: 22px;
+}
+
+/* иконка булавки */
+.icon-pin:before {
+    content: '\E804';
+    font-size: 24px;
+}
+
+/* иконка юзера */
+.icon-user-0:before { 
+    content: '\F2C0'; 
+    font-size: 22px;
+}
+
+/* middleSide */
+
+.welcomeToChannel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.aboutDesc {
+    display: flex;
+}
+
+.titleWelcome {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6e7dce;
+    margin-bottom: 35px;
+}
+
+.textWelcome {
+    color: #8b94a1;
+    margin-bottom: 35px;
+}
+
+.grayText {
+    color: #88919d;
+    font-weight: 700;
+}
+
+.colorSea {
+    color: #0098d2;
+}
+
+.aDiscord {
+    text-decoration: none;
+    color: #0098d2;
+}
+
+/* иконка внимание */
+.icon-attention-circled:before { 
+    content: '\E806'; 
+    font-size: 42px;
+    color: #778fe6;
+    margin-right: 45px;
+}
+
+/* иконка юзер+ */
+.icon-user-plus:before { 
+    content: '\F234'; 
+    font-size: 42px;
+    color: #778fe6;
+    margin-right: 45px;
+}
+
+/* иконка смартфона */
+.icon-mobile:before { 
+    content: '\e805'; 
+    font-size: 42px;
+    color: #778fe6;
+    margin-right: 62px;
+}
+
+/* иконка твиттера */
+.icon-twitter:before { 
+    content: '\e807'; 
+    font-size: 42px;
+    color: #778fe6;
+    margin-right: 58px;
+}
+
+/* bottomSide */
+/* Message */
+
+.message {
+    position: absolute;
+    bottom: 65px;
+}
+
+.input {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    background-color: #474a52;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="text"]::placeholder {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input:focus::-webkit-input-placeholder { 
+    color:transparent;
+}
+
+.inputPlus {
+    position: absolute;
+    left: 30px;
+    bottom: 86px;
+    z-index: 5;
+    width: 25px;
+    height: 25px;
+}
+
+.iconsImg {
+    position: absolute;
+    right: 40px;
+    bottom: 85px;
+}
+
+/* иконка подарка */
+.icon-gift:before { 
+    content: '\E803'; 
+    font-size: 22px;
+    padding-top: 5px;
+}
+
+/* иконка JCB */
+.icon-cc-jcb:before { 
+    content: '\F24B'; 
+    font-size: 22px;
+    padding-top: 5px;
+}
+
+/* иконка смайлика */
+.icon-smile:before { 
+    content: '\F118'; 
+    font-size: 22px;
+    padding-top: 5px;
+}
+
+/* Users */
+
+#users {
+    background-color: #36393f;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.inputSearch {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    background-color: #000;
+    outline: none;
+    border: none;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    color: white;
+}
+
+input[type="search"]::placeholder {
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    color: #74787f;
+}
+
+.icon-search {
+    content: '\e80a'; 
+    font-size: 20px;
+    padding-top: 5px;
+    position: absolute;
+    top: 56px;
+    right: 105px;
+}
+
+.icon-mail {
+    content: '\e80b'; 
+    font-size: 22px;
+    padding-top: 5px;
+    margin-right: 6px;
+}
+
+.icon-help-circled {
+    content: '\e80c'; 
+    font-size: 22px;
+    padding-top: 5px;
+}
+
+.listUsers {
+    background-color: #2f3136;
+    height: 90vh;
+    position: relative;
+}
+
+.bots {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.subtitleUsers {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #7d7e81;
+}
+
+.aboutBot {
+    display: flex;
+}
+
+.aboutBot:hover {
+    background-color: #34373c;
+}
+
+.userpick {
+    width: 50px;
+    height: 50px;
+}
+
+.nameBot {
+    color: #1ec9a1;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.nameBot p {
+    margin-bottom: 0;
+}
+
+.botDesk {
+    color: #848187;
+    font-size: 14px;
+}
+
+.playing {
+    color: 383868b;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.members {
+    margin-top: 35px;
+    margin-left: 25px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.member:hover {
+    background-color: #34373c;
+}
+
+.nameMember {
+    color: #e67e21;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.offline {
+    margin-top: 35px;
+    margin-left: 25px;
+}
+
+.subtitleOffline {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #7d7e81;
+}
+
+.offlineUsers {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.offlineUsers:hover {
+    background-color: #34373c;
+}
+
+.nameUsersOffline {
+    color: #e67e21;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 15px;
+    text-transform: none;
+}
