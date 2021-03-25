@@ -1,13 +1,13 @@
 # Discord-app-electron
 
-// Установка зависимостей:
+Установка зависимостей:
 npm install
 
-// Запуск приложения:
+Запуск приложения:
 npm start
 
-// Упаковка приложения:
+Упаковка приложения:
 npm install --save-dev electron-packager
 
-// "Сбилдить" приложение для Windows:
+"Сбилдить" приложение для Windows:
 npm run package-win
